@@ -1,3 +1,5 @@
+Adapted from https://bug-111980-attachments.webkit.org/attachment.cgi?id=192517
+
 --- a/configure.ac	2018-04-02 11:46:28.469578174 +0800
 +++ b/configure.ac	2018-04-02 11:45:25.777610347 +0800
 @@ -1396,7 +1396,11 @@
