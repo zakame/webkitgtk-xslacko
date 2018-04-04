@@ -1,0 +1,14 @@
+--- a/configure.ac	2018-04-02 11:46:28.469578174 +0800
++++ b/configure.ac	2018-04-02 11:45:25.777610347 +0800
+@@ -1396,7 +1396,11 @@
+ AC_SUBST(GTK2_CFLAGS)
+ AC_SUBST(GTK2_LIBS)
+ 
++m4_ifdef([GTK_DOC_CHECK], [
+ GTK_DOC_CHECK([1.10])
++],[
++AM_CONDITIONAL([ENABLE_GTK_DOC], false)
++])
+ 
+ # OS conditionals
+ AM_CONDITIONAL([OS_WIN32],[test "$os_win32" = "yes"])
