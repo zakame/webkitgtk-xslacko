@@ -1,0 +1,18 @@
+* webkitgtk 1.10.2, patched for X-Slacko 4.4
+
+This is based the webkitgtk 1.10.2 slackbuild for Slackware 14.1 from
+https://github.com/slackyeu/repository-slacky, patched to support using
+from X-Slacko 4.4.
+
+This particular build disables the optional integration with Geoclue and
+other dependenceis for geolocation, as well as removes building gtk-doc
+to conserve space.  Additional patches are sourced/adapted from
+http://www.linuxfromscratch.org/blfs/view/7.4/x/webkitgtk.html and
+https://bugs.webkit.org/show_bug.cgi?id=111980.
+
+* Build instructions
+
+#+BEGIN_SRC sh
+# on X-Slacko, /tmp is on a tmpfs, so build this on /var/tmp instead
+TMP=/var/tmp/buildpkgs/webkitgtk time sh ./webkitgtk.SlackBuild
+#+END_SRC
